@@ -1,0 +1,189 @@
+//////////////// Horizontal Gallery Container ////////////////
+
+.horizontalgallery-container {
+  display: flex;
+  flex-direction: column; // vertical for mobile
+  gap: 1.5rem;
+  align-items: stretch;
+
+  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  background-color: white;
+  text-align: left;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.horizontalgallery-image {
+  width: 100%;
+  height: auto;
+
+  img,
+  iframe,
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 0;
+  }
+}
+
+.horizontalgallery-content {
+  width: 100%;
+}
+
+.horizontalgallery-hed {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.horizontalgallery-subhed {
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  font-style: italic;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.horizontalgallery-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.horizontalgallery-media-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.horizontalgallery-media {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 2rem;
+
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y; // enable single-finger vertical panning
+  gap: 1rem;
+
+  // Hide scrollbar
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > * {
+    flex: 0 0 auto;
+    height: 250px; // fixed height
+    max-height: 250px;
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+.horizontalgallery-media.is-dragging {
+  cursor: grabbing;
+}
+
+.horizontalgallery-media img {
+  pointer-events: none;
+  // user-drag: none;
+  -webkit-user-drag: none;
+}
+
+.horizontalgallery-media img,
+.horizontalgallery-media video,
+.horizontalgallery-media iframe {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+// Scroll indicator
+.horizontalgallery-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100px;
+  height: 6px;
+
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.horizontalgallery-indicator-fill {
+  height: 100%;
+  background: #000;
+  border-radius: 999px;
+  transition: width 0.15s ease-out;
+}
+
+.horizontalgallery-arrow {
+  display: none; // arrows hidden by default on mobile
+}
+
+///////////// Desktop (768px and up) /////////////
+
+@media (min-width: 768px) {
+  .horizontalgallery-container {
+    gap: 1rem;
+  }
+
+  .horizontalgallery-indicator {
+    width: 140px;
+  }
+
+  .horizontalgallery-hed {
+    font-size: 1.5rem;
+  }
+}
+
+// Left and Right Naviation Arrows
+.horizontalgallery-arrow {
+  display: flex;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border-radius: 50%;
+  border: 1px solid #55555580;
+  background: white;
+
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.horizontalgallery-arrow:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.horizontalgallery-arrow.left {
+  left: -20px;
+}
+
+.horizontalgallery-arrow.right {
+  right: -20px;
+}

@@ -1,0 +1,119 @@
+////////// Global Styles //////////
+
+.centered-text {
+  max-width: 1000px;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.h1 {
+  font-family: 'Amiri', 'Crimson Text', Times New Roman, serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  text-align: left;
+  width: calc(100% - 2rem);
+  margin: 0.5rem 0;
+}
+
+.h2 {
+  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.65rem;
+  font-weight: 400;
+  text-align: left;
+  margin: 0.5rem 0;
+  width: calc(100% - 2rem);
+}
+
+.h3 {
+  font-family: 'Amiri', 'Crimson Text', Times New Roman, serif;
+  font-size: 2rem;
+  line-height: 1.75rem;
+  text-align: left;
+  width: calc(100% - 2rem);
+  margin: 1rem 0;
+}
+
+.h4 {
+  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: left;
+  width: calc(100% - 2rem);
+  margin: 1rem 0;
+}
+
+.paragraph {
+  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  text-align: left;
+  margin: 1.25rem 0;
+  width: calc(100% - 2rem);
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 50px;
+  height: auto;
+  margin: 1rem auto;
+}
+
+///////////// View this project /////////////
+
+.view-this-project {
+  // text styling
+  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1rem;
+  background-color: white;
+  font-weight: 400;
+  // button styling
+  padding: 0.75rem;
+  background: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  // effect
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.view-this-project:hover {
+  color: #b76e79;
+  cursor: pointer;
+  border-color: #b76e79;
+}
+
+//////////////////////////////////////////////////
+
+////////// Put footer at bottom //////////
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+//////////////////////////////////////////////////
+@media (min-width: 768px) {
+  .centered-text {
+    width: calc(100% - 10rem);
+  }
+}
