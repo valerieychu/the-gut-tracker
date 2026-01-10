@@ -7,12 +7,14 @@
   "keywords": [
     "gatsby"
   ],
+  "homepage": "https://valerieychu.github.io/the-gut-tracker",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@fontsource/open-sans": "^5.2.6",
@@ -34,6 +36,7 @@
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
     "less": "^4.3.0",
     "less-loader": "^12.3.0",
     "style-loader": "^4.0.0"
