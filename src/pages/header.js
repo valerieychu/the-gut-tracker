@@ -5,7 +5,7 @@ import { navigate } from 'gatsby';
 const Header = () => {
   return (
     <header className='header'>
-      <div className='header-name-position'>
+      {/* <div className='header-name-position'>
         <button className='header-name' onClick={() => navigate('/')}>
           Valerie Chu
         </button>
@@ -41,7 +41,7 @@ const Header = () => {
         <button className='me' onClick={() => navigate('/about')}>
           Me
         </button>
-      </div>
+      </div> */}
     </header>
   );
 };

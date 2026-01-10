@@ -18,6 +18,7 @@ const Footer = () => {
 
   return (
     <footer className='footer'>
+      <div class="horizontal-line"></div>
       <div className='footer-content'>
         <p>
           <span className='heart'>&#9829;</span> Design and development by
