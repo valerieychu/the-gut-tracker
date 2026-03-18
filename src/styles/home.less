@@ -4,6 +4,7 @@
   padding: 1.5rem 1rem 0rem;
   text-align: center;
   margin: 0 auto;
+  overflow: hidden;
 
   @media (min-width: 672px) {
     // positioning
@@ -11,26 +12,68 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    overflow: visible; // blobs always visible
   }
 }
 
-.image {
-  height: 15rem;
-  width: 15rem;
-  margin: 1rem;
+.blob {
+  position: relative;
 }
 
-.imageslideshowwrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  overflow-x: auto;
+.pink-blob {
+  position: absolute;
+  left: 22vh;
+  top: -10vh;
+  z-index: 0;
+  pointer-events: none;
+  @media (min-width: 672px) {
+    // positioning
+    left: 60%;
+  }
 }
 
-.imageslideshow {
-  max-height: 142px;
-  width: auto;
-  margin: 1rem 0;
+.blue-blob {
+  position: absolute;
+  left: -17vh;
+  top: 15vh;
+  z-index: 0;
+  pointer-events: none;
+  @media (min-width: 672px) {
+    // positioning
+    left: -21%;
+  }
 }
+
+.green-blob {
+  position: absolute;
+  left: 15vh;
+  top: 30vh;
+  z-index: 0;
+  pointer-events: none;
+  @media (min-width: 672px) {
+    // positioning
+    left: 50%;
+    top: 33%;
+  }
+}
+
+// .image {
+//   height: 15rem;
+//   width: 15rem;
+//   margin: 1rem;
+// }
+
+// .imageslideshowwrapper {
+//   display: flex;
+//   flex-direction: row;
+//   gap: 1rem;
+//   overflow-x: auto;
+// }
+
+// .imageslideshow {
+//   max-height: 142px;
+//   width: auto;
+//   margin: 1rem 0;
+// }
 
 ///////////// Select Works /////////////
