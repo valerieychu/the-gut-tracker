@@ -13,7 +13,11 @@
 }
 
 .h0 {
-  font-family: 'Amiri', 'Crimson Text', Times New Roman, serif;
+  font-family:
+    "Amiri",
+    "Crimson Text",
+    Times New Roman,
+    serif;
   font-size: 4rem;
   line-height: 5.5rem;
   letter-spacing: 0.1rem;
@@ -34,7 +38,11 @@
 }
 
 .h05 {
-  font-family: 'Amiri', 'Crimson Text', Times New Roman, serif;
+  font-family:
+    "Amiri",
+    "Crimson Text",
+    Times New Roman,
+    serif;
   font-size: 1.75rem;
   line-height: 3rem;
   font-weight: 400;
@@ -42,7 +50,7 @@
   width: calc(100% - 2rem);
   margin: 0.5rem 0;
   margin-bottom: 1rem;
-  
+
   position: relative;
   z-index: 100;
 
@@ -54,17 +62,57 @@
 }
 
 .h1 {
-  font-family: 'Amiri', 'Crimson Text', Times New Roman, serif;
-  font-size: 2.25rem;
+  font-family:
+    "Amiri",
+    "Crimson Text",
+    Times New Roman,
+    serif;
+  font-size: 2.15rem;
   line-height: 2.5rem;
+  font-weight: 200;
   text-align: left;
   width: calc(100% - 2rem);
   margin: 0.5rem 0;
   margin-bottom: 1rem;
+
+  @media (min-width: 672px) {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
+
+.date {
+  font-family:
+    "Amiri",
+    "Crimson Text",
+    Times New Roman,
+    serif;
+  font-size: 3rem;
+  line-height: 5rem;
+  letter-spacing: -0.1rem;
+  font-weight: 600;
+  text-align: left;
+  width: calc(100% - 2rem);
+  margin: 0.5rem 1rem;
+  margin-bottom: 1rem;
+
+  position: relative;
+  z-index: 100;
+
+  @media (min-width: 672px) {
+    font-size: 5rem;
+    line-height: 8rem;
+    font-weight: 600;
+    margin: 1rem 2rem;
+  }
+
+  @media (max-width: 389px) {
+    font-size: 2.8rem; // for sizes smaller than iPhone 12 Pro
+  }
 }
 
 .h2 {
-  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  font-family: "Open Sans", "Roboto", Arial, sans-serif;
   font-size: 1.25rem;
   line-height: 1.65rem;
   font-weight: 400;
@@ -74,16 +122,26 @@
 }
 
 .h3 {
-  font-family: 'Amiri', 'Crimson Text', Times New Roman, serif;
-  font-size: 2rem;
+  font-family:
+    "Amiri",
+    "Crimson Text",
+    Times New Roman,
+    serif;
+  font-size: 1.75rem;
   line-height: 1.75rem;
+  font-weight: 400;
   text-align: left;
   width: calc(100% - 2rem);
   margin: 1rem 0;
+
+  @media (min-width: 672px) {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
 }
 
 .h4 {
-  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  font-family: "Open Sans", "Roboto", Arial, sans-serif;
   font-size: 1.25rem;
   line-height: 1.5rem;
   text-align: left;
@@ -92,7 +150,7 @@
 }
 
 .paragraph {
-  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  font-family: "Open Sans", "Roboto", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -114,7 +172,7 @@
 
 .view-this-project {
   // text styling
-  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  font-family: "Open Sans", "Roboto", Arial, sans-serif;
   font-size: 0.95rem;
   line-height: 1rem;
   background-color: white;
@@ -127,7 +185,9 @@
   border-radius: 10px;
   border: 1px solid black;
   // effect
-  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition:
+    color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
 }
 
 .view-this-project:hover {

@@ -12,6 +12,14 @@ import blobpink from "../images/blobpink.png";
 import arrowdown from "../images/arrowdown.png";
 
 const Home = () => {
+  const today = new Date();
+
+  const dateToday = today.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
   return (
     <>
       <div className="intro">
@@ -33,9 +41,29 @@ const Home = () => {
             <img src={blobblue} alt="A blue blob." className="blue-blob" />
             <img src={blobgreen} alt="A green blob." className="green-blob" />
           </div>
+
           <br></br>
+          <br></br>
+
           <img src={arrowdown} alt="A down arrow." />
+
           <br></br>
+          <br></br>
+
+          {/* Section 2:  Today's Digest*/}
+          <h1 className="h1">Today's Digest</h1>
+          <h2 className="date">{dateToday}</h2>
+          <h3 className="h3">Breakfast</h3>
+          <h3 className="h3">Lunch</h3>
+          <h3 className="h3">Dinner</h3>
+          <h3 className="h3">Notes</h3>
+          <h3 className="h3">Rating</h3>
+
+          <img src={arrowdown} alt="A down arrow." />
+
+          <br></br>
+          <br></br>
+
           <h3 className="h3">
             Note: This project was started in January 2026. It's very much still
             currently under digestion.
